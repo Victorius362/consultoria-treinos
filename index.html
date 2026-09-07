@@ -1,870 +1,534 @@
-/* =========================================
-   RESET
-========================================= */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <meta name="description" content="Consultoria de treinamento personalizada para seus objetivos.">
 
-html {
-    scroll-behavior: smooth;
-}
+    <title>Consultoria de Treinos</title>
 
-body {
-    font-family: "Inter", sans-serif;
-    background: #0b0b0b;
-    color: #f5f5f5;
-    line-height: 1.6;
-}
+    <link rel="stylesheet" href="style.css">
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 
-.container {
-    width: min(1120px, 92%);
-    margin: 0 auto;
-}
+<body>
 
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-content">
 
-/* =========================================
-   VARIÁVEIS
-========================================= */
+            <a href="#" class="logo">
+                <span>CT</span>
+                <strong>CONSULTORIA</strong>
+            </a>
 
-:root {
-    --background: #0b0b0b;
-    --background-light: #111111;
-    --card: #151515;
-    --border: #292929;
+            <a href="#planos" class="nav-button">
+                Ver planos
+            </a>
 
-    --text: #f5f5f5;
-    --muted: #999999;
+        </div>
+    </header>
 
-    --accent: #d8ff3e;
-    --accent-dark: #b8df22;
-}
 
+    <!-- HERO -->
+    <main>
 
-/* =========================================
-   ELEMENTOS GERAIS
-========================================= */
+        <section class="hero">
+            <div class="container hero-content">
 
-.tag {
-    display: inline-block;
+                <div class="hero-text">
 
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
+                    <span class="tag">
+                        TREINAMENTO PERSONALIZADO
+                    </span>
 
-    color: var(--accent);
+                    <h1>
+                        Treine com propósito.
+                        <span>Evolua de verdade.</span>
+                    </h1>
 
-    margin-bottom: 20px;
-}
+                    <p>
+                        Um planejamento de treinamento pensado para
+                        o seu objetivo, sua rotina e o seu nível.
+                    </p>
 
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+                    <div class="hero-buttons">
 
-    padding: 15px 24px;
+                        <a href="#planos" class="button button-primary">
+                            Quero começar
+                            <span>→</span>
+                        </a>
 
-    border-radius: 5px;
+                        <a href="#como-funciona" class="button button-secondary">
+                            Como funciona
+                        </a>
 
-    font-size: 14px;
-    font-weight: 700;
+                    </div>
 
-    transition: 0.25s ease;
-}
+                </div>
 
-.button-primary {
-    background: var(--accent);
-    color: #0b0b0b;
-}
 
-.button-primary:hover {
-    background: var(--accent-dark);
-    transform: translateY(-2px);
-}
+                <div class="hero-card">
 
-.button-secondary {
-    border: 1px solid var(--border);
-    color: var(--text);
-}
+                    <div class="card-top">
+                        <span>SEU TREINO</span>
+                        <span class="card-number">01</span>
+                    </div>
 
-.button-secondary:hover {
-    border-color: #555;
-    transform: translateY(-2px);
-}
+                    <div class="hero-line"></div>
 
-.large {
-    padding: 17px 30px;
-}
+                    <h2>
+                        Personalizado.<br>
+                        Progressivo.<br>
+                        Inteligente.
+                    </h2>
 
+                    <p>
+                        Não é apenas uma ficha.
+                        É um processo de evolução.
+                    </p>
 
-/* =========================================
-   NAVBAR
-========================================= */
+                </div>
 
-.navbar {
-    height: 76px;
+            </div>
+        </section>
 
-    border-bottom: 1px solid var(--border);
 
-    background: rgba(11, 11, 11, 0.95);
+        <!-- DIFERENCIAIS -->
+        <section class="diferenciais">
+            <div class="container">
 
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+                <div class="section-header">
+                    <span class="tag">POR QUE TREINAR COMIGO?</span>
 
-.nav-content {
-    height: 100%;
+                    <h2>
+                        Seu treino deve se adaptar
+                        <span>a você.</span>
+                    </h2>
+                </div>
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+                <div class="features">
 
-.logo span {
-    width: 36px;
-    height: 36px;
+                    <article class="feature">
+                        <div class="feature-number">01</div>
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+                        <h3>Individualidade</h3>
 
-    background: var(--accent);
-    color: #0b0b0b;
+                        <p>
+                            Seu treinamento é elaborado considerando
+                            seus objetivos, experiência, rotina e disponibilidade.
+                        </p>
+                    </article>
 
-    font-size: 13px;
-    font-weight: 900;
-}
 
-.logo strong {
-    font-size: 12px;
-    letter-spacing: 2px;
-}
+                    <article class="feature">
+                        <div class="feature-number">02</div>
 
-.nav-button {
-    padding: 10px 18px;
+                        <h3>Progressão</h3>
 
-    border: 1px solid var(--border);
-    border-radius: 4px;
+                        <p>
+                            O objetivo não é simplesmente treinar mais,
+                            mas criar uma evolução consistente ao longo do tempo.
+                        </p>
+                    </article>
 
-    font-size: 12px;
-    font-weight: 700;
 
-    transition: 0.2s;
-}
+                    <article class="feature">
+                        <div class="feature-number">03</div>
 
-.nav-button:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
+                        <h3>Estratégia</h3>
 
+                        <p>
+                            Exercícios, volume, intensidade e organização
+                            são pensados para fazer sentido dentro do seu processo.
+                        </p>
+                    </article>
 
-/* =========================================
-   HERO
-========================================= */
+                </div>
 
-.hero {
-    min-height: 680px;
+            </div>
+        </section>
 
-    display: flex;
-    align-items: center;
 
-    border-bottom: 1px solid var(--border);
-}
+        <!-- COMO FUNCIONA -->
+        <section class="process" id="como-funciona">
+            <div class="container">
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 80px;
+                <div class="section-header">
+                    <span class="tag">O PROCESSO</span>
 
-    align-items: center;
-}
+                    <h2>
+                        Simples para você.
+                        <span>Estratégico por trás.</span>
+                    </h2>
+                </div>
 
-.hero h1 {
-    max-width: 700px;
 
-    font-size: clamp(42px, 6vw, 72px);
+                <div class="steps">
 
-    line-height: 1.02;
-    letter-spacing: -3px;
+                    <div class="step">
+                        <span>01</span>
 
-    margin-bottom: 28px;
-}
+                        <div>
+                            <h3>Avaliação</h3>
 
-.hero h1 span {
-    display: block;
-    color: var(--accent);
-}
+                            <p>
+                                Você fornece informações sobre seu objetivo,
+                                experiência e rotina.
+                            </p>
+                        </div>
+                    </div>
 
-.hero-text > p {
-    max-width: 570px;
 
-    color: var(--muted);
+                    <div class="step">
+                        <span>02</span>
 
-    font-size: 17px;
+                        <div>
+                            <h3>Planejamento</h3>
 
-    margin-bottom: 35px;
-}
+                            <p>
+                                Seu treinamento é estruturado de acordo
+                                com suas necessidades.
+                            </p>
+                        </div>
+                    </div>
 
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
 
+                    <div class="step">
+                        <span>03</span>
 
-/* HERO CARD */
+                        <div>
+                            <h3>Execução</h3>
 
-.hero-card {
-    min-height: 390px;
+                            <p>
+                                Você recebe as orientações necessárias
+                                para colocar o planejamento em prática.
+                            </p>
+                        </div>
+                    </div>
 
-    padding: 35px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #171717,
-            #0e0e0e
-        );
+                    <div class="step">
+                        <span>04</span>
 
-    border: 1px solid var(--border);
+                        <div>
+                            <h3>Evolução</h3>
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+                            <p>
+                                Acompanhe seu desempenho e faça os ajustes
+                                necessários ao longo do processo.
+                            </p>
+                        </div>
+                    </div>
 
-    position: relative;
-}
+                </div>
 
-.hero-card::before {
-    content: "";
+            </div>
+        </section>
 
-    position: absolute;
 
-    width: 100px;
-    height: 100px;
+        <!-- PLANOS -->
+        <section class="plans" id="planos">
+            <div class="container">
 
-    background: var(--accent);
+                <div class="section-header center">
+                    <span class="tag">ESCOLHA SEU PLANO</span>
 
-    opacity: 0.08;
+                    <h2>
+                        Encontre o nível de acompanhamento
+                        <span>ideal para você.</span>
+                    </h2>
+                </div>
 
-    top: 0;
-    right: 0;
-}
 
-.card-top {
-    display: flex;
-    justify-content: space-between;
+                <div class="plans-grid">
 
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
 
-    color: var(--muted);
-}
+                    <!-- PLANO 1 -->
+                    <article class="plan">
 
-.card-number {
-    color: var(--accent);
-}
+                        <div class="plan-header">
+                            <span class="plan-label">ESSENCIAL</span>
 
-.hero-line {
-    width: 50px;
-    height: 3px;
+                            <h3>
+                                R$ 60
+                            </h3>
 
-    background: var(--accent);
-}
+                            <p>
+                                Para quem quer começar com
+                                um treino personalizado.
+                            </p>
+                        </div>
 
-.hero-card h2 {
-    font-size: 34px;
-    line-height: 1.1;
-    letter-spacing: -1px;
-}
 
-.hero-card p {
-    color: var(--muted);
-    font-size: 14px;
-}
+                        <div class="plan-divider"></div>
 
 
-/* =========================================
-   SECTION HEADER
-========================================= */
+                        <ul>
 
-.section-header {
-    max-width: 700px;
+                            <li>
+                                <span>✓</span>
+                                Montagem personalizada
+                            </li>
 
-    margin-bottom: 65px;
-}
+                            <li>
+                                <span>✓</span>
+                                Anamnese e objetivos
+                            </li>
 
-.section-header.center {
-    margin-left: auto;
-    margin-right: auto;
+                            <li>
+                                <span>✓</span>
+                                Organização da rotina
+                            </li>
 
-    text-align: center;
-}
+                            <li>
+                                <span>✓</span>
+                                Orientações dos exercícios
+                            </li>
 
-.section-header h2 {
-    font-size: clamp(32px, 4vw, 48px);
+                            <li>
+                                <span>✓</span>
+                                1 ajuste
+                            </li>
 
-    line-height: 1.1;
+                        </ul>
 
-    letter-spacing: -2px;
-}
 
-.section-header h2 span {
-    color: var(--accent);
-}
+                        <a href="https://wa.me/5591999999999?text=Olá!%20Tenho%20interesse%20no%20plano%20Essencial."
+                           class="plan-button">
+                            Quero esse plano
+                        </a>
 
+                    </article>
 
-/* =========================================
-   DIFERENCIAIS
-========================================= */
 
-.diferenciais {
-    padding: 120px 0;
+                    <!-- PLANO 2 -->
+                    <article class="plan featured">
 
-    background: var(--background-light);
+                        <div class="popular">
+                            MAIS ESCOLHIDO
+                        </div>
 
-    border-bottom: 1px solid var(--border);
-}
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+                        <div class="plan-header">
+                            <span class="plan-label">EVOLUÇÃO</span>
 
-    gap: 1px;
+                            <h3>
+                                R$ 100<span>/mês</span>
+                            </h3>
 
-    background: var(--border);
-}
+                            <p>
+                                Para quem quer acompanhamento
+                                e evolução contínua.
+                            </p>
+                        </div>
 
-.feature {
-    padding: 40px;
 
-    background: var(--background-light);
-}
+                        <div class="plan-divider"></div>
 
-.feature-number {
-    color: var(--accent);
 
-    font-size: 12px;
-    font-weight: 800;
+                        <ul>
 
-    margin-bottom: 35px;
-}
+                            <li>
+                                <span>✓</span>
+                                Tudo do plano Essencial
+                            </li>
 
-.feature h3 {
-    font-size: 21px;
+                            <li>
+                                <span>✓</span>
+                                Acompanhamento mensal
+                            </li>
 
-    margin-bottom: 15px;
-}
+                            <li>
+                                <span>✓</span>
+                                Ajustes durante o mês
+                            </li>
 
-.feature p {
-    color: var(--muted);
+                            <li>
+                                <span>✓</span>
+                                Suporte para dúvidas
+                            </li>
 
-    font-size: 14px;
-}
+                            <li>
+                                <span>✓</span>
+                                Análise de vídeos
+                            </li>
 
+                            <li>
+                                <span>✓</span>
+                                Planejamento de progressão
+                            </li>
 
-/* =========================================
-   PROCESSO
-========================================= */
+                        </ul>
 
-.process {
-    padding: 120px 0;
 
-    border-bottom: 1px solid var(--border);
-}
+                        <a href="https://wa.me/5591999999999?text=Olá!%20Tenho%20interesse%20no%20plano%20Evolução."
+                           class="plan-button primary-plan">
+                            Quero esse plano
+                        </a>
 
-.steps {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+                    </article>
 
-    gap: 20px;
-}
 
-.step {
-    display: flex;
-    gap: 25px;
+                    <!-- PLANO 3 -->
+                    <article class="plan">
 
-    padding: 30px;
+                        <div class="plan-header">
+                            <span class="plan-label">PERFORMANCE</span>
 
-    border: 1px solid var(--border);
+                            <h3>
+                                R$ 150<span>/mês</span>
+                            </h3>
 
-    background: var(--background-light);
-}
+                            <p>
+                                Para quem deseja um acompanhamento
+                                mais próximo e estratégico.
+                            </p>
+                        </div>
 
-.step > span {
-    color: var(--accent);
 
-    font-size: 13px;
-    font-weight: 800;
-}
+                        <div class="plan-divider"></div>
 
-.step h3 {
-    margin-bottom: 8px;
 
-    font-size: 19px;
-}
+                        <ul>
 
-.step p {
-    color: var(--muted);
+                            <li>
+                                <span>✓</span>
+                                Tudo do plano Evolução
+                            </li>
 
-    font-size: 14px;
-}
+                            <li>
+                                <span>✓</span>
+                                Acompanhamento próximo
+                            </li>
 
+                            <li>
+                                <span>✓</span>
+                                Ajustes contínuos
+                            </li>
 
-/* =========================================
-   PLANOS
-========================================= */
+                            <li>
+                                <span>✓</span>
+                                Análise de execução
+                            </li>
 
-.plans {
-    padding: 120px 0;
+                            <li>
+                                <span>✓</span>
+                                Planejamento de progressão
+                            </li>
 
-    background: var(--background-light);
+                            <li>
+                                <span>✓</span>
+                                Estratégia de periodização
+                            </li>
 
-    border-bottom: 1px solid var(--border);
-}
+                        </ul>
 
-.plans-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
 
-    gap: 20px;
+                        <a href="https://wa.me/5591999999999?text=Olá!%20Tenho%20interesse%20no%20plano%20Performance."
+                           class="plan-button">
+                            Quero esse plano
+                        </a>
 
-    align-items: stretch;
-}
+                    </article>
 
-.plan {
-    padding: 35px;
+                </div>
 
-    background: var(--card);
+            </div>
+        </section>
 
-    border: 1px solid var(--border);
 
-    display: flex;
-    flex-direction: column;
+        <!-- MONTAGEM AVULSA -->
+        <section class="single">
+            <div class="container">
 
-    position: relative;
+                <div class="single-content">
 
-    transition: 0.25s ease;
-}
+                    <div>
+                        <span class="tag">AINDA NÃO QUER UMA CONSULTORIA?</span>
 
-.plan:hover {
-    transform: translateY(-5px);
+                        <h2>
+                            Comece com uma
+                            <span>montagem avulsa.</span>
+                        </h2>
 
-    border-color: #444;
-}
+                        <p>
+                            Para quem deseja apenas um treino personalizado,
+                            sem acompanhamento mensal.
+                        </p>
+                    </div>
 
-.plan.featured {
-    border-color: var(--accent);
-}
 
-.popular {
-    position: absolute;
+                    <div class="single-price">
 
-    top: -1px;
-    right: 25px;
+                        <span>A partir de</span>
 
-    padding: 7px 12px;
+                        <strong>R$ 40</strong>
 
-    background: var(--accent);
-    color: #0b0b0b;
+                        <a href="https://wa.me/5591999999999?text=Olá!%20Tenho%20interesse%20na%20montagem%20avulsa."
+                           class="button button-primary">
+                            Quero meu treino →
+                        </a>
 
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
+                    </div>
 
-.plan-label {
-    color: var(--accent);
+                </div>
 
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
+            </div>
+        </section>
 
-.plan h3 {
-    margin: 18px 0 10px;
 
-    font-size: 38px;
-    letter-spacing: -1px;
-}
+        <!-- CTA FINAL -->
+        <section class="cta">
 
-.plan h3 span {
-    color: var(--muted);
+            <div class="container">
 
-    font-size: 14px;
-    font-weight: 500;
-}
+                <span class="tag">SEU PRÓXIMO PASSO</span>
 
-.plan-header p {
-    min-height: 48px;
+                <h2>
+                    Pronto para começar
+                    <span>a evoluir?</span>
+                </h2>
 
-    color: var(--muted);
+                <p>
+                    Escolha seu plano e vamos estruturar
+                    seu treinamento.
+                </p>
 
-    font-size: 13px;
-}
+                <a href="https://wa.me/5591999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20consultoria."
+                   class="button button-primary large">
+                    Falar comigo no WhatsApp →
+                </a>
 
-.plan-divider {
-    height: 1px;
+            </div>
 
-    background: var(--border);
+        </section>
 
-    margin: 30px 0;
-}
+    </main>
 
-.plan ul {
-    list-style: none;
 
-    display: flex;
-    flex-direction: column;
+    <!-- FOOTER -->
+    <footer>
 
-    gap: 15px;
+        <div class="container footer-content">
 
-    margin-bottom: 35px;
-}
+            <div class="logo">
+                <span>CT</span>
+                <strong>CONSULTORIA</strong>
+            </div>
 
-.plan li {
-    display: flex;
-    gap: 10px;
+            <p>
+                © 2026 CT Consultoria. Todos os direitos reservados.
+            </p>
 
-    color: #d0d0d0;
+        </div>
 
-    font-size: 13px;
-}
+    </footer>
 
-.plan li span {
-    color: var(--accent);
-    font-weight: 800;
-}
-
-.plan-button {
-    margin-top: auto;
-
-    width: 100%;
-
-    padding: 14px;
-
-    text-align: center;
-
-    border: 1px solid var(--border);
-
-    border-radius: 4px;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    transition: 0.25s;
-}
-
-.plan-button:hover {
-    border-color: var(--accent);
-
-    color: var(--accent);
-}
-
-.primary-plan {
-    background: var(--accent);
-
-    border-color: var(--accent);
-
-    color: #0b0b0b;
-}
-
-.primary-plan:hover {
-    background: var(--accent-dark);
-
-    color: #0b0b0b;
-}
-
-
-/* =========================================
-   MONTAGEM AVULSA
-========================================= */
-
-.single {
-    padding: 70px 0;
-
-    border-bottom: 1px solid var(--border);
-}
-
-.single-content {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 40px;
-
-    padding: 50px;
-
-    background: var(--card);
-
-    border: 1px solid var(--border);
-}
-
-.single h2 {
-    max-width: 600px;
-
-    font-size: 34px;
-    line-height: 1.1;
-
-    margin-bottom: 15px;
-}
-
-.single h2 span {
-    color: var(--accent);
-}
-
-.single p {
-    color: var(--muted);
-
-    font-size: 14px;
-}
-
-.single-price {
-    min-width: 220px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-end;
-}
-
-.single-price span {
-    color: var(--muted);
-
-    font-size: 11px;
-}
-
-.single-price strong {
-    font-size: 40px;
-
-    margin-bottom: 15px;
-}
-
-
-/* =========================================
-   CTA
-========================================= */
-
-.cta {
-    padding: 140px 0;
-
-    text-align: center;
-}
-
-.cta .tag {
-    margin-bottom: 20px;
-}
-
-.cta h2 {
-    max-width: 800px;
-
-    margin: 0 auto 20px;
-
-    font-size: clamp(40px, 6vw, 64px);
-
-    line-height: 1;
-
-    letter-spacing: -3px;
-}
-
-.cta h2 span {
-    color: var(--accent);
-}
-
-.cta p {
-    color: var(--muted);
-
-    margin-bottom: 35px;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    border-top: 1px solid var(--border);
-
-    padding: 35px 0;
-}
-
-.footer-content {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-content p {
-    color: var(--muted);
-
-    font-size: 11px;
-}
-
-
-/* =========================================
-   RESPONSIVIDADE
-========================================= */
-
-@media (max-width: 900px) {
-
-    .hero {
-        padding: 90px 0;
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-    }
-
-    .hero-card {
-        min-height: 300px;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-    }
-
-    .plans-grid {
-        grid-template-columns: 1fr;
-
-        max-width: 500px;
-
-        margin: 0 auto;
-    }
-
-    .steps {
-        grid-template-columns: 1fr;
-    }
-
-    .single-content {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .single-price {
-        align-items: flex-start;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .navbar {
-        height: 68px;
-    }
-
-    .nav-button {
-        display: none;
-    }
-
-    .hero {
-        min-height: auto;
-
-        padding: 80px 0;
-    }
-
-    .hero h1 {
-        font-size: 43px;
-
-        letter-spacing: -2px;
-    }
-
-    .hero-text > p {
-        font-size: 15px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .button {
-        width: 100%;
-    }
-
-    .hero-card {
-        padding: 25px;
-
-        min-height: 280px;
-    }
-
-    .hero-card h2 {
-        font-size: 29px;
-    }
-
-    .diferenciais,
-    .process,
-    .plans {
-        padding: 80px 0;
-    }
-
-    .section-header {
-        margin-bottom: 40px;
-    }
-
-    .section-header h2 {
-        font-size: 34px;
-    }
-
-    .feature {
-        padding: 30px;
-    }
-
-    .step {
-        padding: 25px;
-    }
-
-    .plan {
-        padding: 30px;
-    }
-
-    .single {
-        padding: 40px 0;
-    }
-
-    .single-content {
-        padding: 30px;
-    }
-
-    .single h2 {
-        font-size: 29px;
-    }
-
-    .cta {
-        padding: 100px 0;
-    }
-
-    .cta h2 {
-        font-size: 43px;
-
-        letter-spacing: -2px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-
-        gap: 20px;
-
-        text-align: center;
-    }
-
-}
+</body>
+</html>
